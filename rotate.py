@@ -14,7 +14,7 @@ RESET = "\033[0m"
 
 # ชื่อไฟล์ .txt ที่เก็บลิงก์
 file_path = 'urls.txt'
-SLEEP_DURATION = 1 * 60 * 60  # หน่วยเป็นs
+SLEEP_DURATION = 0.5 * 60 * 60  # หน่วยเป็นs
 
 def extract_session(url):
     parsed_url = urllib.parse.urlparse(url)
@@ -51,7 +51,7 @@ def refresh_links():
 while True:
     print(f"{YELLOW}[{current_time()}] Starting script ...{RESET}")
     refresh_links()
-    print(f"{YELLOW}[{current_time()}] พัก 1 ชั่วโมง ...{RESET}")
+    print(f"{YELLOW}[{current_time()}] พัก 1/2 ชั่วโมง ...{RESET}")
     time.sleep(SLEEP_DURATION)
     print(f"{YELLOW}[{current_time()}] กำลังเริ่มสคริป ...{RESET}")
 
